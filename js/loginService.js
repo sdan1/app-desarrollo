@@ -41,15 +41,15 @@ function login(email, password) {
         body: JSON.stringify({email,password})
     })
 
-    .then((data)>={
+    .then((data)=> {
         alertType ='success'
-        message = 'Inicio de seccion exitoso.'
+        message = 'Inicio de sesion exitoso.'
         console.log('Responde bien' + data)
     })
-    .catch((error) >={
+    .catch((error)=> {
         alertType = 'danger'
         message = 'Correo electronio o contraseña incorrectos'
-        console.error('Erro')
+        console.error('Error', error)
 
     })
      /* Creacion de la ventana de alerta*/
